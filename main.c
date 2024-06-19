@@ -57,7 +57,7 @@ int main() {
     printf("Insira um CPF (formato XXX.XXX.XXX-XX): ");
     scanf("%14s", cpf);
     if (validateCPF(cpf)) {
-        printf("CPF is é válido.\n");
+        printf("CPF é válido.\n");
         printf("Desenvolvedor do Programa: Bruno Werner");
     } else {
         printf("CPF é inválido.\n");
