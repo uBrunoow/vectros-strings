@@ -54,14 +54,18 @@ bool validateCPF(char *strCPF) {
 int main() {
     char cpf[15];
 
-    printf("Insira um CPF (formato XXX.XXX.XXX-XX): ");
-    scanf("%14s", cpf);
+    while (1) {
+        printf("Insira um CPF (formato XXX.XXX.XXX-XX): ");
+        scanf("%14s", cpf);
 
-    if (validateCPF(cpf)) {
-        printf("CPF é válido.\n");
-        printf("Desenvolvedor do Programa: Bruno Werner");
-    } else {
-        printf("CPF é inválido.\n");
+        if (validateCPF(cpf)) {
+            printf("CPF é válido.\n");
+            printf("Desenvolvedor do Programa: Bruno Werner");
+            break;
+        } else {
+            printf("CPF é inválido. Por favor, tente novamente.\n");
+        }
     }
+
     return 0;
 }
